@@ -15,6 +15,8 @@ public class BeerResponse {
     private String breweryType;
     @JsonProperty("city")
     private String city;
+    @JsonProperty("state")
+    private String state;
     @JsonProperty("country")
     private String country;
 
@@ -59,6 +61,14 @@ public class BeerResponse {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getCountry() {
