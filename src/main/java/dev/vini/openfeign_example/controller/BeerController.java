@@ -3,6 +3,7 @@ package dev.vini.openfeign_example.controller;
 import dev.vini.openfeign_example.client.BeerClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,10 @@ public class BeerController {
     @GetMapping
     public ResponseEntity getAllBeers(){
         return ResponseEntity.ok(beerClient.getAllBeers());
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity getBeerById(@PathVariable("id") String id){
+        return ResponseEntity.ok(beerClient.getBeerById(id));
     }
 }
