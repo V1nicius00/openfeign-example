@@ -15,4 +15,7 @@ public interface BeerClient {
     @GetMapping
     List<BeerResponse> getAllBeers();
 
+    @GetMapping("{id}")
+    List<BeerResponse> getBeerById(String id);
+
 }
