@@ -29,6 +29,11 @@ public class BeerController {
         return ResponseEntity.ok(beerClient.getRandomBeer());
     }
 
+    @GetMapping("/meta")
+    public ResponseEntity getMeta(){
+        return ResponseEntity.ok(beerClient.getMeta());
+    }
+
     @GetMapping("{id}")
     public ResponseEntity getBeerById(@PathVariable("id") String id){
         return ResponseEntity.ok(beerClient.getBeerById(id));
