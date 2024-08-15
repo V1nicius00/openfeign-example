@@ -17,6 +17,9 @@ public interface BeerClient {
     @GetMapping
     List<BeerResponse> getAllBeers();
 
+    @GetMapping("?by_country={country}")
+    List<BeerResponse> getBeerByCountry(@PathVariable("country") String country);
+
     @GetMapping("/random")
     List<BeerResponse> getRandomBeer();
 
