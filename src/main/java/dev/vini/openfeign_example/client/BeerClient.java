@@ -16,6 +16,9 @@ public interface BeerClient {
     @GetMapping
     List<BeerResponse> getAllBeers();
 
+    @GetMapping("/random")
+    List<BeerResponse> getRandomBeer();
+
     @GetMapping("{id}")
     BeerResponse getBeerById(@PathVariable("id") String id);
 
