@@ -1,6 +1,7 @@
 package dev.vini.openfeign_example.client;
 
 import dev.vini.openfeign_example.controller.dto.BeerResponse;
+import dev.vini.openfeign_example.controller.dto.MetaResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,9 @@ public interface BeerClient {
 
     @GetMapping("/random")
     List<BeerResponse> getRandomBeer();
+
+    @GetMapping("/meta")
+    MetaResponse getMeta();
 
     @GetMapping("{id}")
     BeerResponse getBeerById(@PathVariable("id") String id);
