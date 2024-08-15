@@ -24,6 +24,11 @@ public class BeerController {
         return ResponseEntity.ok(beerClient.getAllBeers());
     }
 
+    @GetMapping("/random")
+    public ResponseEntity getRandomBeer(){
+        return ResponseEntity.ok(beerClient.getRandomBeer());
+    }
+
     @GetMapping("{id}")
     public ResponseEntity getBeerById(@PathVariable("id") String id){
         return ResponseEntity.ok(beerClient.getBeerById(id));
