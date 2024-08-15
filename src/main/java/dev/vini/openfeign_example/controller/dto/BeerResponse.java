@@ -7,17 +7,11 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming;
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class BeerResponse {
 
-    @JsonProperty("id")
     private String id;
-    @JsonProperty("name")
     private String name;
-    @JsonProperty("brewery_type")
     private String breweryType;
-    @JsonProperty("city")
     private String city;
-    @JsonProperty("state")
     private String state;
-    @JsonProperty("country")
     private String country;
 
     public BeerResponse() {
